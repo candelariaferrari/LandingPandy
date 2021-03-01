@@ -1,0 +1,225 @@
+$raleway: 'Raleway', sans-serif;
+$noto: 'Noto Sans', sans-serif;
+$negro: #0D0D0D;
+$blanco: #F2F2F2;
+$amarillo: #F2C12E;  
+
+
+.amarrillo {
+    background-color: $amarillo;
+    height: 55rem;
+}
+.blanco{
+    background-color: $blanco;
+    height: 55rem;
+}
+.negro{
+    background-color: $negro;
+    height: 55rem;
+}
+/* menu */ 
+nav.navbar.navbar-expand-md.navbar-dark.fixed-top{
+    background-color: $negro;
+}
+a.navbar-brand{
+    padding-left: 4em;
+}
+div#navbarCollapse{
+    flex-grow: 0;
+    padding-right: 4em;
+}
+.navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+    color: $blanco;
+    text-transform: capitalize;
+}
+
+/* header*/
+.carousel {
+    margin-bottom: 4rem;
+  }
+  .carousel-caption.text-start {
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+    top: 20em;
+    left: 15%;
+    padding-top: 0;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+    img{
+        width: 20em;
+        margin-bottom: 2em;
+    }
+}
+  .carousel-item {
+    height: 50rem;
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 50rem;
+  }
+
+  /* boton empecemos */ 
+  #cboton {
+      button{
+          background-color: $blanco;
+          border: 0px solid transparent;
+          width: 20rem;
+          padding: 0.5em 0em;
+          border-radius: 5px;
+          font-family: $raleway;
+          font-weight: 500;
+          font-size: 1rem;
+      }
+  }
+  #startForm {
+      margin-top: 2em;
+      form{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-end;
+          width: 20em;
+          input{
+            background-color: $blanco;
+            border: 0px solid transparent;
+            width: 20rem;
+            padding: 0.5em 0em;
+            border-radius: 5px;
+            font-family: $raleway;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 1em;  
+          }
+          button{
+            background-color: $amarillo;
+            color: $negro;
+            border: 0px solid transparent;
+            width: 5rem;
+            padding: 0.5em 0em;
+            border-radius: 5px;
+            font-family: $raleway;
+            font-weight: 500;
+            font-size: 1rem; 
+          }
+      }
+  }
+  #notificacion {
+    color: $amarillo;
+    border: 0px solid transparent;
+    width: 25rem;
+    padding: 0.5em 0em;
+    border-radius: 5px;
+    font-family: $raleway;
+    font-weight: 500;
+    font-size: 1rem; 
+    margin-top: 2em;
+  }
+
+// NOSOTROS 
+#nosotros{
+    .row.cNosotros{
+        padding: 10em 1em;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+    .cTextNosotros{
+        padding: 0em 2em;
+        .titleNosotros {
+            font-family: $raleway;
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: $negro;
+        }
+        .parrafoNosotros {
+            font-family: $raleway;
+            font-weight: 500;
+            font-size: 3rem;
+            color: $negro;
+            line-height: 0.9;
+            text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.386);
+        }
+    }
+}
+.cPerson {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 1em;
+}
+.imgPerson {
+    width: 12em;
+    border-radius: 100%;
+}
+.nombrePerson {
+    font-family: $raleway;
+    text-align: center;
+    color: $negro;
+    font-size: 1rem;
+    margin-top: 1em;
+
+}
+.puestoPerson {
+    font-family: $noto;
+    text-align: center;
+    font-size: 1rem;
+    color:$negro;
+    font-weight: 700;
+    margin-top: -1em;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid $blanco;
+}
+
+
+// PACKS 
+.titlePacks {
+    font-family: $raleway;
+    font-weight: 700;
+    font-size: 3rem;
+    color: $negro;
+    line-height: 0.9;
+    text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.386);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 2em;
+}
+#contenedorPacks {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-top: 5em;  
+} 
+.cpack {
+    background-color: $amarillo;
+    height: 12em;
+    width: 10em;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+    -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+    -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+}
+.btnAgregarP {
+    background-color: $negro;
+    color: $blanco;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    padding: 0.5em;
+    width: 10em;
+    margin-top: 1em;
+    box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+    -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+    -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+}
