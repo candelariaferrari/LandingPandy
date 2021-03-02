@@ -39,7 +39,7 @@ const subPack = document.getElementById('subtitlePacks');
 const subtituloPack = document.createElement('div');
 
 subPack.appendChild(subtituloPack);
-//NO ME SALIO 
+
 subtituloPack.textContent = localStorage.getItem("nombre") + " Elegí el pack que mas se adapte a vos!",
 
 class productoPack {
