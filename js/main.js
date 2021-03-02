@@ -35,6 +35,14 @@ formulario.onsubmit = (event) => {
     subPack.appendChild(subtituloPack);
 
     subtituloPack.textContent = localStorage.getItem("nombre") + " Elegí el pack que mas se adapte a vos!";
+
+    /* SERVICIOS */ 
+    const subServicios = document.getElementById('textServicios');
+    const subtituloServicios = document.createElement('div');
+
+    subServicios.appendChild(subtituloServicios);
+
+    subtituloServicios.textContent = localStorage.getItem("nombre") + " podemos llevar tu negocio al siguiente nivel.";
 }
 
 
@@ -148,4 +156,29 @@ for(let trabajo of datosTrabajos){
   })
   
 
+/* CONTACTO */ 
+var nombre;
+var mail;
+var celular;
+var motivo;
+var consultaTx;
+const categoria = class consultas {
+  constructor(nombre, mail, celular, motivo, consultaTx) {
+    this.nombre = nombre;
+    this.mail = mail;
+    this.celular = celular;
+    this.motivo = motivo;
+    this.consultaTx = consultaTx;
+  }
+};
 
+function enviarConsulta() {
+  let nombre = document.getElementById("nombreId").value;
+  let email = document.getElementById("mailId").value;
+  let celu = document.getElementById("celId").value;
+  let motivo = document.getElementById("motivoId").value;
+  let consultaTx = document.getElementById("consultaId").value;
+  console.log(nombre + " " + email + " " + celu + " " + motivo + " "+ consultaTx);
+  const consultaText = new consultas(nombre, email, celu, motivo, consultaTxt);
+  console.log(consultaText);
+}

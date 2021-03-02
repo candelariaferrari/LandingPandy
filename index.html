@@ -143,9 +143,8 @@
                             <div class="titleServicios">
                                 Nuestros servicios
                             </div>
-                            <div class="parrafoServicios">
+                            <div class="parrafoServicios" id="textServicios">
                                 <!-- Intentar hacer con java con el nombre de cliente -->
-                                Podemos llevar tu negocio al siguiente nivel
                             </div>
                         </div>
                     </div>
@@ -270,9 +269,43 @@
 
     <!-- CONTACTO -->
     <div class="container-fluid blanco">
-        <div class="container">
-            contacto
-        </div>
+        <section id="contact" >
+            <div class="cContact container-fluid">
+                <h1>Contacto</h1>
+                <form class="row g-3 needs-validation container-fluid" novalidate>
+                    <div class="col-md-6 position-relative">
+                        <label for="nombreId" class="form-label">Nombre Apellido</label>
+                        <input type="text" class="form-control" id="nombreId"  required>
+                    </div>
+                    <div class="col-md-6 position-relative">
+                        <label for="validationTooltipUsername" class="form-label">Email</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                            <input type="text" class="form-control" id="mailId" aria-describedby="validationTooltipUsernamePrepend" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 position-relative">
+                        <label for="validationTooltip03" class="form-label">Celular</label>
+                        <input type="number" class="form-control" id="celId" required>
+                    </div>
+                    <div class="col-md-6 position-relative">
+                        <label for="validationTooltip04" class="form-label">Consulta</label>
+                        <select class="form-select" id="motivoId" required>
+                            <option selected disabled value="">Elija el motivo de su consulta</option>
+                            <option>Como comprar</option>
+                            <option>Envio y sucursales</option>
+                            <option>Quiero ser parte de la cocina de De Pasteles</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea class="form-control" placeholder="Escriba su consulta" id="consultaId" style="height: 100px"></textarea>
+                      </div>
+                    <div class="col-md-12">
+                      <button class="btn" type="button" onclick="enviarConsulta()"> click para Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </div>
     
 
