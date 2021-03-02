@@ -29,7 +29,7 @@ div#navbarCollapse{
     padding-right: 4em;
 }
 .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
-    color: $blanco;
+    color: $blanco !important;
     text-transform: capitalize;
 }
 
@@ -135,12 +135,12 @@ div#navbarCollapse{
         .titleNosotros {
             font-family: $raleway;
             font-weight: 400;
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: $negro;
         }
         .parrafoNosotros {
             font-family: $raleway;
-            font-weight: 500;
+            font-weight: 700;
             font-size: 3rem;
             color: $negro;
             line-height: 0.9;
@@ -180,6 +180,11 @@ div#navbarCollapse{
 
 
 // PACKS 
+#packs {
+    .row{
+        align-items: center;
+    }
+}
 .titlePacks {
     font-family: $raleway;
     font-weight: 700;
@@ -190,7 +195,39 @@ div#navbarCollapse{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding-top: 2em;
+    padding-top: 3em;
+}
+#subtitlePacks{
+    font-family: $raleway;
+    font-weight: 500;
+    font-size: 2rem;
+    color: $negro;
+    line-height: 0.9;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 0.5em;
+}
+.btnCrear{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  button.btn{
+        background-color: $amarillo;
+        color: $negro;
+        font-family: $raleway;
+        font-size: 1.2rem;
+        font-weight: 700;
+        border: 0px solid transparent;
+        border-radius: 10px;
+        padding: 0.5em 0em;
+        width: 12em;
+        margin-top: 1em;
+        box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+    } 
 }
 #contenedorPacks {
     display: flex;
@@ -203,13 +240,35 @@ div#navbarCollapse{
 } 
 .cpack {
     background-color: $amarillo;
-    height: 12em;
-    width: 10em;
+    height: 18em;
+    width: 12em;
     padding: 1em;
     border-radius: 10px;
     box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
     -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
     -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+}
+.nombreP{
+    font-family: $raleway;
+    color: $negro;
+    font-size: 2rem;
+}
+.productosP{
+    color: $blanco;
+    font-size: 1.2rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    height: 6em;
+}
+.precioP{
+    font-family: $noto;
+    color: $negro;
+    font-size: 1.5rem; 
+    text-align: center;
+    border: 1px solid $blanco;
+    padding: 0.2em;
+    border-radius: 5px;
+    margin-top: 1.5em;
 }
 .btnAgregarP {
     background-color: $negro;
@@ -217,9 +276,198 @@ div#navbarCollapse{
     border: 0px solid transparent;
     border-radius: 10px;
     padding: 0.5em;
-    width: 10em;
+    width: 12em;
     margin-top: 1em;
     box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
     -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
     -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+}
+
+.cCarrito{
+    color: red;
+    height: 50em;
+    margin-top: 8em;
+}
+
+
+/* SERVICIOS */ 
+#servicios {
+    .row{
+        align-items: center;
+    }
+}
+.cContendor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10em;
+    padding: 0em 4em;
+    .cardUno{
+        background-color: $blanco;
+        box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        border-radius: 15px;
+        width: 15em;
+        height: 18em;
+    }
+    .cardDos{
+        background-color: $blanco;
+        box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        border-radius: 15px;
+        width: 15em;
+        height: 18em;
+        margin-top: -4em;
+    }
+    .cardTitulo{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2em;
+        img{
+            width: 2rem;
+            margin-right: 1em;
+        }
+        h2{
+            color: $amarillo;
+            font-family: $raleway;
+            font-weight: 500;
+            margin-top: 0.5em;
+            font-size: 2em;
+        }
+    }
+    .text{
+       font-family: $noto;
+       padding: 0em 1em;
+       margin-top: 3.5em;     
+    }
+}
+.cContendorDos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+    padding: 0em 4em;
+    .cardUno{
+        background-color: $blanco;
+        box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        border-radius: 15px;
+        width: 15em;
+        height: 18em;
+    }
+    .cardDos{
+        background-color: $blanco;
+        box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        border-radius: 15px;
+        width: 15em;
+        height: 18em;
+        margin-top: -4em;
+    }
+    .cardTitulo{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2em;
+        img{
+            width: 2rem;
+            margin-right: 1em;
+        }
+        h2{
+            color: $amarillo;
+            font-family: $raleway;
+            font-weight: 500;
+            margin-top: 0.5em;
+            font-size: 2em;
+        }
+    }
+    .text{
+       font-family: $noto;
+       padding: 0em 1em;
+       margin-top: 3.5em;     
+    }
+}
+.cTextServicios{
+    padding: 0em 4em;
+    .titleServicios {
+        font-family: $raleway;
+        font-weight: 400;
+        font-size: 2rem;
+        color: $negro;
+    }
+    .parrafoServicios {
+        font-family: $raleway;
+        font-weight: 700;
+        font-size: 4rem;
+        color: $negro;
+        line-height: 0.9;
+        text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.386);
+    }
+}
+
+
+/* TRABAJOS */ 
+#trabajos {
+    color: $blanco;
+    h2{
+        font-family: $raleway;
+        font-weight: 500;
+        font-size: 2rem;
+        color: $blanco;
+        line-height: 0.9;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 0.5em; 
+        padding-top: 3em; 
+    }
+}
+
+#contenedorTrabajos {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 6em;
+    img{
+        width: 16rem;
+        padding-right: 1em;
+        border-right: 2px solid $amarillo;
+    }
+    h3{
+        color: $amarillo;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 1.5em;
+        font-family: $raleway;
+    }
+    h2{
+        color: $blanco;
+        font-family: $noto;
+        font-size: 1rem;
+        margin-top: -3em;
+    }
+}
+#contenedorCliente{
+    position: relative;
+    h4{
+        font-family: $raleway;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: $blanco;
+        line-height: 0.9;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 0.5em; 
+        padding-top: 3em; 
+        margin-top: 3em;
+    }
 }

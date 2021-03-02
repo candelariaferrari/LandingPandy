@@ -32,7 +32,15 @@ formulario.onsubmit = (event) => {
 
 
 
+
 /* PACKS */ 
+const subPack = document.getElementById('subtitlePacks');
+const subtituloPack = document.createElement('div');
+
+subPack.appendChild(subtituloPack);
+//NO ME SALIO 
+subtituloPack.textContent =" Elegí el pack que mas se adapte a vos!",
+
 class productoPack {
     constructor(datosPacks) {
         this.id = datosPacks.id;
@@ -47,11 +55,12 @@ let carritopackHtml = document.getElementById("packsCargados"); // contendor de 
 function crearElementoPack() {
     datosPacks.forEach(pack => { // para crear cada pack 
         let nodo = document.createElement('div')
-        nodo.innerHTML =    `<div class="cpack">
+        nodo.innerHTML =  `<div class="cpack">
                                 <h3 class="nombreP"> ${pack.nombre}</h3>
+                                <p class="productosP"> ${pack.productosPacks}</p>
                                 <h4 class="precioP"> $${pack.precio}</h4>
                             </div>
-                                <button id="${pack.nombre}" onclick="addToCart(${datosPacks.indexOf(pack)})" class="btnAgregarP"> Agregar al carrito </button>
+                            <button id="${pack.nombre}" onclick="addToCart(${datosPacks.indexOf(pack)})" class="btnAgregarP"> Agregar al carrito </button>
                             `;                        // para saber que index es
         padrePack.appendChild(nodo);                       
     })
@@ -104,6 +113,23 @@ function borradoDePack(index) {
 }
 
 
+  /* TRABAJOS*/ 
+for(let trabajo of datosTrabajos){
+    generarHTMLjQuery(trabajo);
+  }
+  
+  //FUNCION PARA GENERAR HTML USANDO jQUERY
+  function generarHTMLjQuery(trabajo){
+    $('#contenedorTrabajos').prepend(`<div>
+                                    <img src="${trabajo.imagen}">
+                                    <h3>${trabajo.nombre}</h3>
+                                    <h2>${trabajo.descripcion}</h2>
+                                  </div>`);
+  }
+  
+  window.addEventListener('load', () => {
+    console.log("trabajo");
+  })
   
 
 
