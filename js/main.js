@@ -14,7 +14,7 @@ boton.textContent = 'Empezamos?'
   });
 });
 
-let dataFormulario= [];
+var dataFormulario;
 
 let  formulario = document.getElementById("formularioEmpezamos");
 formulario.onsubmit = (event) => {
@@ -27,6 +27,7 @@ formulario.onsubmit = (event) => {
     padre.innerHTML = `Gracias ${dataFormulario.nombre}, estamos listos para empezar!`;
     console.log(dataFormulario); // para ver la info del formulario 
     localStorage.setItem("nombre", dataFormulario.nombre);
+    return formulario;
 }
 
 
@@ -39,7 +40,7 @@ const subtituloPack = document.createElement('div');
 
 subPack.appendChild(subtituloPack);
 //NO ME SALIO 
-subtituloPack.textContent =" Elegí el pack que mas se adapte a vos!",
+subtituloPack.textContent = localStorage.getItem("nombre") + " Elegí el pack que mas se adapte a vos!",
 
 class productoPack {
     constructor(datosPacks) {
@@ -64,7 +65,10 @@ function crearElementoPack() {
                             `;                        // para saber que index es
         padrePack.appendChild(nodo);                       
     })
+
 }
+
+
 crearElementoPack();
 
 function addToCart(index) { // funcion para el push carrito y sumar la cantidad 
@@ -86,6 +90,12 @@ function addToCart(index) { // funcion para el push carrito y sumar la cantidad
         carritoPack.push(pack)
     }
     renderCarritoPack();
+    localStorage.setItem("pack", pack.nombre);
+    localStorage.setItem("cantidad", pack.cantidad);
+    localStorage.setItem("precio", pack.precio);
+
+
+ 
 }
 //FUNCION RENDERIZAR CARRITO (GRAFICAR EL ARRAY)
 function renderCarritoPack() {
@@ -102,7 +112,12 @@ function renderCarritoPack() {
             `
         })
     }
+    localStorage.getItem("pack");
+    localStorage.getItem("cantidad");
+    localStorage.getItem("precio");
+
 }
+
 // PARA BORRAR (borra de a uno y cuando llega a cero lo quita de la lista)
 function borradoDePack(index) {
     carritoPack[index].cantidad = carritoPack[index].cantidad - 1;
