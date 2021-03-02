@@ -41,7 +41,7 @@ formulario.onsubmit = (event) => {
 
 
 
-
+/* packs */
 
 class productoPack {
     constructor(datosPacks) {
