@@ -27,20 +27,21 @@ formulario.onsubmit = (event) => {
     padre.innerHTML = `Gracias ${dataFormulario.nombre}, estamos listos para empezar!`;
     console.log(dataFormulario); // para ver la info del formulario 
     localStorage.setItem("nombre", dataFormulario.nombre);
-    return formulario;
+
+    /* PACKS */ 
+    const subPack = document.getElementById('subtitlePacks');
+    const subtituloPack = document.createElement('div');
+
+    subPack.appendChild(subtituloPack);
+
+    subtituloPack.textContent = localStorage.getItem("nombre") + " Elegí el pack que mas se adapte a vos!";
 }
 
 
 
 
 
-/* PACKS */ 
-const subPack = document.getElementById('subtitlePacks');
-const subtituloPack = document.createElement('div');
 
-subPack.appendChild(subtituloPack);
-
-subtituloPack.textContent = localStorage.getItem("nombre") + " Elegí el pack que mas se adapte a vos!",
 
 class productoPack {
     constructor(datosPacks) {
