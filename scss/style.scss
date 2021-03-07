@@ -1,8 +1,11 @@
+
+
 $raleway: 'Raleway', sans-serif;
 $noto: 'Noto Sans', sans-serif;
 $negro: #0D0D0D;
 $blanco: #F2F2F2;
 $amarillo: #F2C12E;  
+
 
 
 .amarrillo {
@@ -12,6 +15,9 @@ $amarillo: #F2C12E;
 .blanco{
     background-color: $blanco;
     height: 55rem;
+}
+.blancoDos {
+    height: 150vh !important;
 }
 .negro{
     background-color: $negro;
@@ -195,7 +201,7 @@ div#navbarCollapse{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding-top: 3em;
+    padding-top: 1em;
 }
 #subtitlePacks{
     font-family: $raleway;
@@ -289,6 +295,65 @@ div#navbarCollapse{
     margin-top: 8em;
 }
 
+#packsCargados {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-top: 1em;  
+} 
+.cpack {
+    background-color: $amarillo;
+    height: 18em;
+    width: 12em;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+    -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+    -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+}
+.nombreP{
+    font-family: $raleway;
+    color: $negro;
+    font-size: 2rem;
+}
+.productosP{
+    color: $blanco;
+    font-size: 1.2rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    height: 6em;
+}
+.precioP{
+    font-family: $noto;
+    color: $negro;
+    font-size: 1.5rem; 
+    text-align: center;
+    border: 1px solid $blanco;
+    padding: 0.2em;
+    border-radius: 5px;
+    margin-top: 1.5em;
+}
+.btnAgregarP {
+    background-color: $negro;
+    color: $blanco;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    padding: 0.5em;
+    width: 12em;
+    margin-top: 1em;
+    box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+    -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+    -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+}
+
+.cCarrito{
+    color: red;
+    height: 50em;
+    margin-top: 8em;
+}
 
 /* SERVICIOS */ 
 #servicios {
@@ -469,5 +534,48 @@ div#navbarCollapse{
         padding-top: 0.5em; 
         padding-top: 3em; 
         margin-top: 3em;
+    }
+}
+
+/* CONTACTO */ 
+#contacto{
+    .row{
+        align-items: center;
+        padding-top: 8em;
+    }
+    .form-label{
+        font-size: 1em;
+        font-family: $raleway;
+        color: $amarillo;
+    }
+    .form-control{
+        border: 2px solid $amarillo;
+    }
+    .form-select{
+        border: 2px solid $amarillo;
+    }
+    .btn {
+        float: right;
+        background-color: $negro;
+        color: $amarillo;
+        width: 10em;
+        font-family: $raleway;
+    }
+    .cTextNosotros{
+        padding: 0em 2em;
+        .titleNosotros {
+            font-family: $raleway;
+            font-weight: 400;
+            font-size: 2rem;
+            color: $negro;
+        }
+        .parrafoNosotros {
+            font-family: $raleway;
+            font-weight: 700;
+            font-size: 3rem;
+            color: $negro;
+            line-height: 0.9;
+            text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.386);
+        }
     }
 }

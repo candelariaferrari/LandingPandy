@@ -112,7 +112,7 @@ function renderCarritoPack() {
     if (carritoPack.length > 0) {
         carritoPack.forEach(pack => {
             carritopackHtml.innerHTML += `
-            <div>
+            <div class="cpack">
             <h3 class="nombreP"> ${pack.nombre}</h3>
             <h4 class="precioP">${pack.precio * pack.cantidad}</h4>
             <h5>${pack.cantidad}</h5>
@@ -157,28 +157,33 @@ for(let trabajo of datosTrabajos){
   
 
 /* CONTACTO */ 
-var nombre;
+var nombrecontacto;
 var mail;
 var celular;
 var motivo;
-var consultaTx;
-const categoria = class consultas {
-  constructor(nombre, mail, celular, motivo, consultaTx) {
-    this.nombre = nombre;
+var consultaTexto;
+class consultas {
+  constructor(nombrecontacto, mail, celular, motivo, consultaTexto) {
+    this.nombrecontacto = nombrecontacto;
     this.mail = mail;
     this.celular = celular;
     this.motivo = motivo;
-    this.consultaTx = consultaTx;
+    this.consultaTexto = consultaTexto;
   }
 };
 
 function enviarConsulta() {
-  let nombre = document.getElementById("nombreId").value;
+  let nombrecontacto = document.getElementById("nombreId").value;
   let email = document.getElementById("mailId").value;
-  let celu = document.getElementById("celId").value;
+  let cel = document.getElementById("celId").value;
   let motivo = document.getElementById("motivoId").value;
-  let consultaTx = document.getElementById("consultaId").value;
-  console.log(nombre + " " + email + " " + celu + " " + motivo + " "+ consultaTx);
-  const consultaText = new consultas(nombre, email, celu, motivo, consultaTxt);
-  console.log(consultaText);
+  let consultaTexto = document.getElementById("consultaId").value;
+  console.log(nombrecontacto + " " + email + " " + cel + " " + motivo + " "+ consultaTexto);
+  const consultaEnviada = new consultas(nombrecontacto, email, cel, motivo, consultaTexto);
+  console.log(consultaEnviada);
+  sessionStorage.setItem("nombre", consultaEnviada.nombrecontacto);
+  sessionStorage.setItem("celular", consultaEnviada.cel);
+  sessionStorage.setItem("email", consultaEnviada.email);
+  sessionStorage.setItem("motivo", consultaEnviada.motivo);
+  sessionStorage.setItem("consulta", consultaEnviada.consultaTexto);
 }
