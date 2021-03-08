@@ -1,3 +1,77 @@
-.tituloProductos{
-    margin-top: 50px;
+$raleway: 'Raleway', sans-serif;
+$noto: 'Noto Sans', sans-serif;
+$negro: #0D0D0D;
+$blanco: #F2F2F2;
+$amarillo: #F2C12E;  
+
+#tituloProductos{
+    margin-top: 70px;
+    color: $blanco;
+    padding-top: 3em;
+    text-align: center;
+    font-family: $raleway;
+}
+
+#contenidoProductos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3em;
+    .producto{
+        width: 15em;
+        border: 2px solid $blanco;
+        border-radius: 10px;
+        padding: 0.5em;
+        text-align: center;
+    }
+    h5{
+        color: $negro;
+        font-family: $raleway;
+        font-size: 1rem;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+    p{
+        color: $blanco;
+        font-family: $noto;
+        font-size: 1.5rem;
+        font-weight: 600; 
+    }
+    .agregarProducto{
+        background-color: $negro;
+        color: $blanco;
+        border: 0px solid transparent;
+        border-radius: 10px;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        width: 12em;
+        margin-top: 1em;
+        box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+    }
+}
+
+#notificacionProductos{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3em;
+    h2{
+        color: $negro;
+        font-family: $raleway;
+        font-size: 2rem;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+    h3{
+        color: $negro;
+        font-family: $raleway;
+        font-size:1rem;
+        text-transform: capitalize;
+        font-weight: 600; 
+    }
 }

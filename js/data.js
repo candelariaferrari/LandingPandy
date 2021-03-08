@@ -45,4 +45,27 @@ let datosTrabajos = [{
   }
 ];
 
+let datosProductos = [{
+  "id": 1,
+  "categoria": "grafico",
+  "nombre": "Logo",
+  "precio": 2500
+  },{
+  "id": 2,
+  "categoria": "grafico",
+  "nombre": "Tarjeta personal",
+  "precio": 700
+  },{
+    "id": 3,
+    "categoria": "grafico",
+    "nombre": "Identidad visual",
+    "precio": 5000
+  },{
+    "id": 4,
+    "categoria": "grafico",
+    "nombre": "Flyer",
+    "precio": 1000
+  }
+];
 
+const productosAGREGADOS = [];
