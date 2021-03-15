@@ -26,13 +26,7 @@ $amarillo: #F2C12E;
         padding: 0.5em;
         text-align: center;
     }
-    h5{
-        color: $negro;
-        font-family: $raleway;
-        font-size: 1rem;
-        text-transform: capitalize;
-        font-weight: 600;
-    }
+  
     p{
         color: $blanco;
         font-family: $noto;
@@ -75,3 +69,14 @@ $amarillo: #F2C12E;
         font-weight: 600; 
     }
 }
+
+#dg{
+    text-align: center;
+    padding-top: 5em;
+}
+#contenidoGeneradoRobots{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} 

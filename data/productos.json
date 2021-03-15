@@ -1,0 +1,11 @@
+
+[{"id":1, "categoria":"dg","nombre":"logo","precio":5000},
+ {"id":2, "categoria":"dg","nombre":"tarjeta persona","precio":700},
+ {"id":3, "categoria":"dg","nombre":"identidad visual","precio":8000},
+ {"id":4, "categoria":"dg","nombre":"flyer","precio":1000},
+ {"id":5, "categoria":"dw","nombre":"landing promocional","precio":8000},
+ {"id":6, "categoria":"dw","nombre":"landing institucional","precio":10000},
+ {"id":7, "categoria":"dw","nombre":"web corporativo","precio":18000},
+ {"id":8, "categoria":"dw","nombre":"web ecommerce","precio":20000}
+    
+]

@@ -17,17 +17,20 @@ boton.textContent = 'Empezamos?'
 var dataFormulario;
 
 let  formulario = document.getElementById("formularioEmpezamos");
+
 formulario.onsubmit = (event) => {
     event.preventDefault (); // evita el comportamiento por defecto del form de "volver a cargar la pag"
     // para enviar la info del formulario 
     let dataFormulario = {
         nombre: event.target.children[0].value,
+        
     }
+    
     let padre = document.getElementById("notificacion"); // salida 
     padre.innerHTML = `Gracias ${dataFormulario.nombre}, estamos listos para empezar!`;
     console.log(dataFormulario); // para ver la info del formulario 
     localStorage.setItem("nombre", dataFormulario.nombre);
-
+   
     /* PACKS */ 
     const subPack = document.getElementById('subtitlePacks');
     const subtituloPack = document.createElement('div');
