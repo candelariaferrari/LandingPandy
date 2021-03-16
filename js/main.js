@@ -63,7 +63,7 @@ class productoPack {
 }
 let carritoPack = []; // para la funcion carrito
 let padrePack = document.getElementById("contenedorPacks"); // contenedor de pack
-let carritopackHtml = document.getElementById("packsCargados"); // contendor de futura lista creada del carrito
+let carritopackHtml = document.getElementById("mensajeAgregados"); // contendor de futura lista creada del carrito
 // funcion para crear un elemento del dom 
 function crearElementoPack() {
     datosPacks.forEach(pack => { // para crear cada pack 
@@ -82,7 +82,11 @@ function crearElementoPack() {
 
 
 crearElementoPack();
-
+$(document).ready(function(){ 
+    $('.btnAgregarP').on('click',function(){
+       $('#mensajeAgregados').toggle(2000);
+    });
+  });
 function addToCart(index) { // funcion para el push carrito y sumar la cantidad 
     let pack = datosPacks[index];
     if (carritoPack.length > 0) {
@@ -112,26 +116,22 @@ function renderCarritoPack() {
     if (carritoPack.length > 0) {
         carritoPack.forEach(pack => {
             carritopackHtml.innerHTML += `
-            <div class="cpack">
-            <h3 class="nombreP"> ${pack.nombre}</h3>
-            <h4 class="precioP">${pack.precio * pack.cantidad}</h4>
-            <h5>${pack.cantidad}</h5>
-            <button id="${pack.nombre}" class="btnAgregarP" type="button" onclick='borradoDePack(${carritoPack.indexOf(pack)})'>Elimnar producto</button>
-            </div>
+            <h3 class="nombreP"> Agregado a carrito ${pack.nombre}</h3>
             `
         })
     }
 }
-
+  /* <h4 class="precioP">${pack.precio * pack.cantidad}</h4>
+            <h5>${pack.cantidad}</h5>
+            <button id="${pack.nombre}" class="btnAgregarP" type="button" onclick='borradoDePack(${carritoPack.indexOf(pack)})'>Elimnar producto</button> */
 // PARA BORRAR (borra de a uno y cuando llega a cero lo quita de la lista)
-function borradoDePack(index) {
+/* function borradoDePack(index) {
     carritoPack[index].cantidad = carritoPack[index].cantidad - 1;
     if (carritoPack[index].cantidad <= 0) {
         carritoPack.splice(index, 1)
     }
     renderCarritoPack();
-}
-
+} */
 
   /* TRABAJOS*/ 
 for(let trabajo of datosTrabajos){

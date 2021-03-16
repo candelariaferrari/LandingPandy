@@ -22,12 +22,14 @@ $amarillo: #F2C12E;
     background-color: $blanco;
     height: 55rem;
 }
-.blancoDos {
-    height: 150vh !important;
-}
+
 .negro{
     background-color: $negro;
     height: 55rem;
+}
+.negroDos{
+    background-color: $negro;
+    height: 15rem;
 }
 /* menu */ 
 nav.navbar.navbar-expand-md.navbar-dark.fixed-top{
@@ -135,6 +137,22 @@ div#navbarCollapse{
     margin-top: 2em;
   }
 
+  .negroFooter{
+      background-color: $negro;
+      height: 10vh;
+  }
+  .row.footer {
+      margin-top: 1.5em;
+      text-align: center;
+      color: $blanco;
+      a{
+          color: $amarillo;
+          text-decoration: none;
+          &:hover{
+              border-bottom: 1px solid $blanco;
+          }
+      }
+  }
 ::-webkit-scrollbar {
     width: 0px;
     background-color: transparent;

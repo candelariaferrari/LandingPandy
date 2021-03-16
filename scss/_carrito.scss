@@ -1,4 +1,43 @@
+.cCarrito{
+    display: flex;
+    justify-content: center;
+    color: $blanco;
+    font-family: $raleway;
+    font-size: 1.5rem;
+}
+.bordesAmarillos{
+    border-left: 2em solid $amarillo;
+    border-right: 2em solid $amarillo;
+    height: 75vh;
+}
+
 #packsCargados{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+    .items{
+        width: 60vw;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 1em;
+        .item{
+            color: $amarillo;
+            font-family: $raleway;
+            font-size: 1.5rem;
+
+            strong{
+                color: $negro;
+                font-family: $noto;
+            }
+        }
+        .btn.eliminar {
+            background-color: $negro;
+            color: $amarillo;
+            font-size: 0.7rem;
+        }
+    }
 }
