@@ -1,0 +1,51 @@
+/* CONTACTO */ 
+#contacto{
+    .row{
+        align-items: center;
+        padding-top: 8em;
+    }
+    .form-label{
+        font-size: 1em;
+        font-family: $raleway;
+        color: $amarillo;
+    }
+    .form-control{
+        border: 2px solid $amarillo;
+    }
+    .form-select{
+        border: 2px solid $amarillo;
+    }
+    .btn {
+        float: right;
+        background-color: $negro;
+        color: $amarillo;
+        width: 10em;
+        font-family: $raleway;
+    }
+
+    #notificacionContacto{
+        margin-top: 2em;
+        .alert{
+            background-color: $amarillo;
+            color: $negro;
+            text-align: center;
+        }
+    }
+    .cTextNosotros{
+        padding: 0em 2em;
+        .titleNosotros {
+            font-family: $raleway;
+            font-weight: 400;
+            font-size: 2rem;
+            color: $negro;
+        }
+        .parrafoNosotros {
+            font-family: $raleway;
+            font-weight: 700;
+            font-size: 3rem;
+            color: $negro;
+            line-height: 0.9;
+            text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.386);
+        }
+    }
+}

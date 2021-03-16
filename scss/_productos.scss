@@ -3,80 +3,138 @@ $noto: 'Noto Sans', sans-serif;
 $negro: #0D0D0D;
 $blanco: #F2F2F2;
 $amarillo: #F2C12E;  
+*{
+    overflow-x: hidden !important;
+}
+.negroTitulo {
+    background-color: $negro;
+    height: 10em;
+}
+
 
 #tituloProductos{
-    margin-top: 70px;
+    padding-top: 6em;
     color: $blanco;
-    padding-top: 3em;
     text-align: center;
     font-family: $raleway;
 }
+#cbotonDG{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: $amarillo;
+    margin: 0em -0.8em;
+    padding: 0.5em;
+    height: 20vh;
+    button.btn.dg{
+        color: $negro;
+        font-size: 2rem;
+    }
+}
+#startFormDG{
+    background-color: $amarillo;
+    margin: -3em -1em 0em;
+    padding: 3em;
+}
 
-#contenidoProductos{
+#cbotonDW{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: $negro;
+    margin: 0em -0.8em;
+    padding: 0.5em;
+    height: 20vh;
+
+    button.btn.dw{
+        color: $amarillo;
+        font-size: 2rem;
+    }
+}
+#startFormWB{
+    background-color: $negro;
+    margin: -3em -1em 0em;
+    padding: 3em;
+}
+#cbotonUX{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: $amarillo;
+    margin: 0em -0.8em;
+    padding: 0.5em;
+    height: 20vh;
+
+    button.btn.ux{
+        color: $negro;
+        font-size: 2rem;
+    }
+}
+#startFormUX{
+    background-color: $amarillo;
+    margin: -3em -1em 0em;
+    padding: 3em;
+}
+#cbotonAV{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: $negro;
+    margin: 0em -0.8em;
+    padding: 0.5em;
+    height: 20vh;
+    button.btn.av{
+        color: $amarillo;
+        font-size: 2rem;
+    }
+}
+#startFormAV{
+    background-color: $negro;
+    margin: -3em -1em 0em;
+    padding: 3em;
+}
+#contenidoProductosDG{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 3em;
+    margin-top: 1em;
     .producto{
+        margin: 1.2em;
         width: 15em;
-        border: 2px solid $blanco;
+        background-color: $blanco;
         border-radius: 10px;
         padding: 0.5em;
         text-align: center;
+        box-shadow: 10px 10px 10px -2px rgba(0, 0, 0, 0.325);
+        -webkit-box-shadow: 10px 10px 10px -2px rgba(0, 0, 0, 0.325);
+        -moz-box-shadow: 10px 10px 10px -2px rgba(0, 0, 0, 0.325);
     }
-  
+    .tituloProducto{
+        color: $amarillo;
+    }
     p{
-        color: $blanco;
+        color: $negro;
         font-family: $noto;
         font-size: 1.5rem;
-        font-weight: 600; 
-    }
-    .agregarProducto{
-        background-color: $negro;
-        color: $blanco;
-        border: 0px solid transparent;
-        border-radius: 10px;
-        padding: 0.5em;
-        margin-bottom: 1em;
-        width: 12em;
-        margin-top: 1em;
-        box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
-        -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
-        -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
-    }
-}
-
-#notificacionProductos{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 3em;
-    h2{
-        color: $negro;
-        font-family: $raleway;
-        font-size: 2rem;
-        text-transform: capitalize;
         font-weight: 600;
+        padding-top: 0.5em; 
     }
-    h3{
+    .agregarProductoDG{
+        background-color: transparent;
         color: $negro;
-        font-family: $raleway;
-        font-size:1rem;
-        text-transform: capitalize;
-        font-weight: 600; 
+        border: 0px solid transparent;
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+        width: 12em;
+        margin-top: 0.5em;
+        &:hover{
+            color: $amarillo;
+        }
     }
 }
 
-#dg{
-    text-align: center;
-    padding-top: 5em;
-}
-#contenidoGeneradoRobots{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-} 
+
+
+

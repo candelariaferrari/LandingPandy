@@ -45,7 +45,7 @@ let datosTrabajos = [{
   }
 ];
 
-let datosProductos = [{
+/* let datosProductos = [{
   "id": 1,
   "categoria": "grafico",
   "nombre": "Logo",
@@ -66,6 +66,27 @@ let datosProductos = [{
     "nombre": "Flyer",
     "precio": 1000
   }
-];
+]; */
 
 const productosAGREGADOS = [];
+
+let dataProductosDG =[{
+  "id": 1,
+  "nombre": "logo",
+  "precio": 5000
+  },{
+    "id": 2,
+    "nombre": "tarjeta personal",
+    "precio": 700
+  },{
+    "id": 3,
+    "nombre": "flyer",
+    "precio": 1000
+  },{
+    "id": 4,
+    "nombre": "identidad visual",
+    "precio": 8000
+  },
+];
+
+const productosAGREGADOSDG = [];

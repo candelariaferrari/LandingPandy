@@ -1,0 +1,122 @@
+/* SERVICIOS */ 
+#servicios {
+    .row{
+        align-items: center;
+    }
+}
+.cContendor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5em;
+    padding: 2em 4em 0.5em;
+    .cardUno{
+        background-color: $blanco;
+        box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        border-radius: 15px;
+        width: 15em;
+        height: 18em;
+    }
+    .cardDos{
+        background-color: $blanco;
+        box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        border-radius: 15px;
+        width: 15em;
+        height: 18em;
+        margin-top: -4em;
+    }
+    .cardTitulo{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2em;
+        img{
+            width: 2rem;
+            margin-right: 1em;
+        }
+        h2{
+            color: $amarillo;
+            font-family: $raleway;
+            font-weight: 500;
+            margin-top: 0.5em;
+            font-size: 2em;
+        }
+    }
+    .text{
+       font-family: $noto;
+       padding: 0em 1em;
+       margin-top: 3.5em;     
+    }
+}
+.cContendorDos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5em;
+    padding: 2em 4em 0.5em;
+    .cardUno{
+        background-color: $blanco;
+        box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        border-radius: 15px;
+        width: 15em;
+        height: 18em;
+    }
+    .cardDos{
+        background-color: $blanco;
+        box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.325);
+        border-radius: 15px;
+        width: 15em;
+        height: 18em;
+        margin-top: -4em;
+    }
+    .cardTitulo{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2em;
+        img{
+            width: 2rem;
+            margin-right: 1em;
+        }
+        h2{
+            color: $amarillo;
+            font-family: $raleway;
+            font-weight: 500;
+            margin-top: 0.5em;
+            font-size: 2em;
+        }
+    }
+    .text{
+       font-family: $noto;
+       padding: 0em 1em;
+       margin-top: 3.5em;     
+    }
+}
+.cTextServicios{
+    padding: 0em 4em;
+    .titleServicios {
+        font-family: $raleway;
+        font-weight: 400;
+        font-size: 2rem;
+        color: $negro;
+    }
+    .parrafoServicios {
+        font-family: $raleway;
+        font-weight: 700;
+        font-size: 4rem;
+        color: $negro;
+        line-height: 0.9;
+        text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.386);
+    }
+}

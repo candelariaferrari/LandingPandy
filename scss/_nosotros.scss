@@ -1,0 +1,56 @@
+// NOSOTROS 
+#nosotros{
+    .row.cNosotros{
+        padding: 10em 1em;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+    .cTextNosotros{
+        padding: 0em 2em;
+        .titleNosotros {
+            font-family: $raleway;
+            font-weight: 400;
+            font-size: 2rem;
+            color: $negro;
+        }
+        .parrafoNosotros {
+            font-family: $raleway;
+            font-weight: 700;
+            font-size: 3rem;
+            color: $negro;
+            line-height: 0.9;
+            text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.386);
+        }
+    }
+}
+.cPerson {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 1em;
+}
+.imgPerson {
+    width: 12em;
+    border-radius: 100%;
+}
+.nombrePerson {
+    font-family: $raleway;
+    text-align: center;
+    color: $negro;
+    font-size: 1rem;
+    margin-top: 1em;
+
+}
+.puestoPerson {
+    font-family: $noto;
+    text-align: center;
+    font-size: 1rem;
+    color:$negro;
+    font-weight: 700;
+    margin-top: -1em;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid $blanco;
+}

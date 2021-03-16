@@ -1,0 +1,58 @@
+/* TRABAJOS */ 
+#trabajos {
+    color: $blanco;
+    h2{
+        font-family: $raleway;
+        font-weight: 500;
+        font-size: 2rem;
+        color: $blanco;
+        line-height: 0.9;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 0.5em; 
+        padding-top: 3em; 
+    }
+}
+
+#contenedorTrabajos {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 6em;
+    img{
+        width: 16rem;
+        padding-right: 1em;
+        border-right: 2px solid $amarillo;
+    }
+    h3{
+        color: $amarillo;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 1.5em;
+        font-family: $raleway;
+    }
+    h2{
+        color: $blanco;
+        font-family: $noto;
+        font-size: 1rem;
+        margin-top: -3em;
+    }
+}
+#contenedorCliente{
+    position: relative;
+    h4{
+        font-family: $raleway;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: $blanco;
+        line-height: 0.9;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 0.5em; 
+        padding-top: 3em; 
+        margin-top: 3em;
+    }
+}

@@ -10,7 +10,7 @@ boton.textContent = 'Empezamos?'
  /* boton conocenos */ 
  $(document).ready(function(){ 
   $('button').on('click',function(){
-     $('#startForm').toggle();
+     $('#startFormInicio').toggle();
   });
 });
 
@@ -189,4 +189,18 @@ function enviarConsulta() {
   sessionStorage.setItem("email", consultaEnviada.email);
   sessionStorage.setItem("motivo", consultaEnviada.motivo);
   sessionStorage.setItem("consulta", consultaEnviada.consultaTexto);
+ 
 }
+$('#notificacionContacto').hide();
+$('#busquedaForm').submit(function (e) { 
+    e.preventDefault();
+    $('#notificacionContacto').html(`<div class="alert" role="alert">
+                                        Gracias! su consulta fue enviada con exito. 
+                                    </div>`);
+    $('#notificacionContacto').fadeIn(2000, function(){
+        $('#notificacionContacto').delay(4000)
+        $('#notificacionContacto').fadeOut(1000);
+    });
+});
+
+
