@@ -102,10 +102,7 @@ function addToCart(index) { // funcion para el push carrito y sumar la cantidad
         carritoPack.push(pack)
     }
     renderCarritoPack();
-    localStorage.setItem("pack", pack.nombre);
-    localStorage.setItem("cantidad", pack.cantidad);
-    localStorage.setItem("precio", pack.precio);
-
+    localStorage.setItem("carritoPack", JSON.stringify(carritoPack));
 
  
 }
@@ -124,10 +121,6 @@ function renderCarritoPack() {
             `
         })
     }
-    localStorage.getItem("pack");
-    localStorage.getItem("cantidad");
-    localStorage.getItem("precio");
-
 }
 
 // PARA BORRAR (borra de a uno y cuando llega a cero lo quita de la lista)
