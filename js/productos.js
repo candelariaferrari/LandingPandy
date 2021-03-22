@@ -14,23 +14,14 @@ $("h3").fadeOut("slow",function(){
   $('.dg').on('click',function(){
      $('#startFormDG').toggle();
   });
-});
-
- /* boton dw */ 
- $(document).ready(function(){ 
-  $('.dw').on('click',function(){
-     $('#startFormDW').toggle();
-  });
-});
+ 
 
 
+  /* DG */ 
 
-//creamos una estructura para cada producto
-for (let productosDG of dataProductosDG) {
-    //con la funcion generarHTML por cada producto, pasamos la info por parámetro
+  for (let productosDG of dataProductosDG) {
     generarHTML(productosDG);
-  }
-  //creamos la estructura html
+  };
   function generarHTML(productosDG) {
     $("#contenidoProductosDG").append(`<div class="producto">
                                       <input value = ${productosDG.id} hidden>
@@ -40,21 +31,46 @@ for (let productosDG of dataProductosDG) {
                                     </div>`);
                                     
                                     
-  }
-/*   <img src="${productosDG.imagen}"/>
- */
-  (document).ready(function () {
-    $(".agregarProductoDG").click(function (e) {
+  };
+  /* $(".agregarProductoDG").click(function (e) {
       let idProductoActual = $(e.target).parent().children()[0].value;
       const infoProducto = dataProductosDG.find(servicio => servicio.id == idProductoActual);
       productosAGREGADOSDG.push(infoProducto);
       $("#notificacionProductosDG").html(`<h2>Producto agregado: ${infoProducto.nombre}</h2>
                                   <h3> Total de producto agregados: ${productosAGREGADOSDG.length} </h3>`);
-    });
+  }); */
+
+  /* FIN DG */
+
+
+  /* DW  */ 
+  $('.dw').on('click',function(){
+    $('#startFormDW').toggle();
+ });
+  for (let productosDW of dataProductosDW) {
+    generarHTML(productosDW);
+  };
+  function generarHTML(productosDW) {
+    $("#contenidoProductosDW").append(`<div class="producto">
+                                      <input value = ${productosDW.id} hidden>
+                                      <h5 class="tituloProducto">${productosDW.nombre}</h5>
+                                      <p> $${productosDW.precio}</p>
+                                      <button class="agregarProductoDW">Agregar</button>
+                                    </div>`);
+                                    
+                                    
+  };
   
+    /* $(".agregarProductoDW").click(function (e) {
+      let idProductoActual = $(e.target).parent().children()[0].value;
+      const infoProductoDW = dataProductosDG.find(servicio => servicio.id == idProductoActual);
+      productosAGREGADOSDG.push(infoProductoDW);
+      $("#notificacionProductosDW").html(`<h2>Producto agregado: ${infoProductoDW.nombre}</h2>
+                                  <h3> Total de producto agregados: ${productosAGREGADOSDW.length} </h3>`);
+    }); */
 
-  
-  });
+/* FIN DW */
+});
 
 
- 
+

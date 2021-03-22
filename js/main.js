@@ -25,6 +25,10 @@ formulario.onsubmit = (event) => {
         nombre: event.target.children[0].value,
         
     }
+    while (dataFormulario === undefined){
+        window.scrollTo(0, 0);
+    };
+    
     
     let padre = document.getElementById("notificacion"); // salida 
     padre.innerHTML = `Gracias ${dataFormulario.nombre}, estamos listos para empezar!`;
@@ -46,6 +50,9 @@ formulario.onsubmit = (event) => {
     subServicios.appendChild(subtituloServicios);
 
     subtituloServicios.textContent = localStorage.getItem("nombre") + " podemos llevar tu negocio al siguiente nivel.";
+
+
+
 }
 
 
