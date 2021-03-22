@@ -90,3 +90,24 @@ let dataProductosDG =[{
 ];
 
 const productosAGREGADOSDG = [];
+
+let dataProductosDW =[{
+  "id": 1,
+  "nombre": "Sitio Web",
+  "precio": 5000
+  },{
+    "id": 2,
+    "nombre": "Landing Page Promocional",
+    "precio": 700
+  },{
+    "id": 3,
+    "nombre": "Landing Page Corporativa",
+    "precio": 1000
+  },{
+    "id": 4,
+    "nombre": "Landing Page subscripcion",
+    "precio": 8000
+  },
+];
+
+const productosAGREGADOSDW = [];
