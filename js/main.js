@@ -20,9 +20,10 @@ var dataFormulario;
 var nombrePrueba = "";
 
 let  formulario = document.getElementById("formularioEmpezamos");
-console.log(document.documentElement.style.width);
+
 document.documentElement.style.position = "fixed";
 document.documentElement.style.width = "100vw";
+
 formulario.onsubmit = (event) => {
     event.preventDefault (); // evita el comportamiento por defecto del form de "volver a cargar la pag"
     // para enviar la info del formulario
