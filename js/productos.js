@@ -5,28 +5,30 @@ $("h3").fadeOut("slow",function(){
     $("h3").fadeIn(500);
 });
 
-
-
-
-
  /* boton dg */ 
- $(document).ready(function(){ 
+$(document).ready(function(){ 
+
   $('.dg').on('click',function(){
      $('#startFormDG').toggle();
   });
- 
+
+   /* DW  */ 
+  $('.dw').on('click',function(){
+    $('#startFormDW').toggle();
+ }); 
 
 
   /* DG */ 
 
   for (let productosDG of dataProductosDG) {
-    generarHTML(productosDG);
+    generarHTML(productosDG, "#contenidoProductosDG");
   };
-  function generarHTML(productosDG) {
-    $("#contenidoProductosDG").append(`<div class="producto">
-                                      <input value = ${productosDG.id} hidden>
-                                      <h5 class="tituloProducto">${productosDG.nombre}</h5>
-                                      <p> $${productosDG.precio}</p>
+  
+  function generarHTML(productos, contenedorPrueba) {
+    $(contenedorPrueba).append(`<div class="producto">
+                                      <input value = ${productos.id} hidden>
+                                      <h5 class="tituloProducto">${productos.nombre}</h5>
+                                      <p> $${productos.precio}</p>
                                       <button class="agregarProductoDG">Agregar</button>
                                     </div>`);
                                     
@@ -43,14 +45,11 @@ $("h3").fadeOut("slow",function(){
   /* FIN DG */
 
 
-  /* DW  */ 
-  $('.dw').on('click',function(){
-    $('#startFormDW').toggle();
- });
-  for (let productosDW of dataProductosDW) {
-    generarHTML(productosDW);
+ 
+   for (let productosDW of dataProductosDW) {
+    generarHTML(productosDW, "#contenidoProductosDW");
   };
-  function generarHTML(productosDW) {
+  function generarHTMLDOS(productosDW) {
     $("#contenidoProductosDW").append(`<div class="producto">
                                       <input value = ${productosDW.id} hidden>
                                       <h5 class="tituloProducto">${productosDW.nombre}</h5>
@@ -60,7 +59,7 @@ $("h3").fadeOut("slow",function(){
                                     
                                     
   };
-  
+   
     /* $(".agregarProductoDW").click(function (e) {
       let idProductoActual = $(e.target).parent().children()[0].value;
       const infoProductoDW = dataProductosDG.find(servicio => servicio.id == idProductoActual);
@@ -69,7 +68,7 @@ $("h3").fadeOut("slow",function(){
                                   <h3> Total de producto agregados: ${productosAGREGADOSDW.length} </h3>`);
     }); */
 
-/* FIN DW */
+  /* FIN DW */
 });
 
 
