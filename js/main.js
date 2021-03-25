@@ -13,7 +13,9 @@ boton.textContent = 'Empezamos?'
      $('#startFormInicio').toggle();
   });
 });
-
+while (dataFormulario.nombre === ""){
+    window.scrollTo(0, 0);
+};
 var dataFormulario;
 
 let  formulario = document.getElementById("formularioEmpezamos");
@@ -25,15 +27,22 @@ formulario.onsubmit = (event) => {
         nombre: event.target.children[0].value,
         
     }
-    while (dataFormulario === undefined){
-        window.scrollTo(0, 0);
-    };
-    
     
     let padre = document.getElementById("notificacion"); // salida 
-    padre.innerHTML = `Gracias ${dataFormulario.nombre}, estamos listos para empezar!`;
+    if(dataFormulario.nombre != "") {
+        padre.innerHTML = `Gracias ${dataFormulario.nombre}, estamos listos para empezar!`;
+        localStorage.setItem("nombre", dataFormulario.nombre);
+        $('.carrusel-inner').fadeOut(3000);
+    }else {
+        padre.innerHTML = `Necesitamos tu nombre ! `;
+        
+    };
+    /* while (dataFormulario.nombre === ""){
+        window.scrollTo(0, 0);
+    }; */
+   /*  padre.innerHTML = `Gracias ${dataFormulario.nombre}, estamos listos para empezar!`;
     console.log(dataFormulario); // para ver la info del formulario 
-    localStorage.setItem("nombre", dataFormulario.nombre);
+    localStorage.setItem("nombre", dataFormulario.nombre); */
    
     /* PACKS */ 
     const subPack = document.getElementById('subtitlePacks');
@@ -51,6 +60,7 @@ formulario.onsubmit = (event) => {
 
     subtituloServicios.textContent = localStorage.getItem("nombre") + " podemos llevar tu negocio al siguiente nivel.";
 
+    
 
 
 }
