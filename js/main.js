@@ -9,20 +9,24 @@ boton.textContent = 'Empezamos?'
 
  /* boton conocenos */ 
  $(document).ready(function(){ 
+
   $('button').on('click',function(){
      $('#startFormInicio').toggle();
   });
 });
-while (dataFormulario.nombre === ""){
-    window.scrollTo(0, 0);
-};
+
+
 var dataFormulario;
+var nombrePrueba = "";
 
 let  formulario = document.getElementById("formularioEmpezamos");
-
+console.log(document.documentElement.style.width);
+document.documentElement.style.position = "fixed";
+document.documentElement.style.width = "100vw";
 formulario.onsubmit = (event) => {
     event.preventDefault (); // evita el comportamiento por defecto del form de "volver a cargar la pag"
-    // para enviar la info del formulario 
+    // para enviar la info del formulario
+    nombrePrueba = "ojsdfla"; 
     let dataFormulario = {
         nombre: event.target.children[0].value,
         
@@ -33,16 +37,14 @@ formulario.onsubmit = (event) => {
         padre.innerHTML = `Gracias ${dataFormulario.nombre}, estamos listos para empezar!`;
         localStorage.setItem("nombre", dataFormulario.nombre);
         $('.carrusel-inner').fadeOut(3000);
+        document.documentElement.style.position = "static";
+
     }else {
         padre.innerHTML = `Necesitamos tu nombre ! `;
+
         
     };
-    /* while (dataFormulario.nombre === ""){
-        window.scrollTo(0, 0);
-    }; */
-   /*  padre.innerHTML = `Gracias ${dataFormulario.nombre}, estamos listos para empezar!`;
-    console.log(dataFormulario); // para ver la info del formulario 
-    localStorage.setItem("nombre", dataFormulario.nombre); */
+   
    
     /* PACKS */ 
     const subPack = document.getElementById('subtitlePacks');
