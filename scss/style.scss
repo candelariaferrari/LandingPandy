@@ -12,7 +12,13 @@ $negro: #0D0D0D;
 $blanco: #F2F2F2;
 $amarillo: #F2C12E;  
 
-
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: $blanco !important;
+    height: 100vh !important;
+}
 
 .amarrillo {
     background-color: $amarillo;
@@ -137,13 +143,14 @@ div#navbarCollapse{
   }
 
   .negroFooter{
-      background-color: $negro;
-      height: 10vh;
+      background-color: $blanco;
+      height: 5vh;
+      margin-bottom: -10em;
   }
   .row.footer {
-      margin-top: 1.5em;
+      margin-top: 0.5em;
       text-align: center;
-      color: $blanco;
+      color: $negro;
       a{
           color: $amarillo;
           text-decoration: none;

@@ -135,6 +135,7 @@ function renderCarritoPack() {
     carritopackHtml.innerHTML = '';
     if (carritoPack.length > 0) {
         carritoPack.forEach(pack => {
+            //alert("Agregado a carrito" + pack.nombre)
             carritopackHtml.innerHTML += `
             <h3 class="nombreP"> Agregado a carrito ${pack.nombre}</h3>
             `

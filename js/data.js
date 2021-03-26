@@ -73,19 +73,25 @@ const productosAGREGADOS = [];
 let dataProductosDG =[{
   "id": 1,
   "nombre": "logo",
-  "precio": 5000
+  "precio": 5000,
   },{
     "id": 2,
     "nombre": "tarjeta personal",
-    "precio": 700
+    "precio": 700,
+    encarrito: false,
+    cantidad: 0
   },{
     "id": 3,
     "nombre": "flyer",
-    "precio": 1000
+    "precio": 1000,
+    encarrito: false,
+    cantidad: 0
   },{
     "id": 4,
     "nombre": "identidad visual",
-    "precio": 8000
+    "precio": 8000,
+    encarrito: false,
+    cantidad: 0
   },
 ];
 
@@ -94,15 +100,15 @@ const productosAGREGADOSDG = [];
 let dataProductosDW =[{
   "id": 1,
   "nombre": "Sitio Web",
-  "precio": 5000
+  "precio": 45000
   },{
     "id": 2,
     "nombre": "Landing Page Promocional",
-    "precio": 700
+    "precio": 10000
   },{
     "id": 3,
     "nombre": "Landing Page Corporativa",
-    "precio": 1000
+    "precio": 15000
   },{
     "id": 4,
     "nombre": "Landing Page subscripcion",
@@ -111,3 +117,42 @@ let dataProductosDW =[{
 ];
 
 const productosAGREGADOSDW = [];
+
+let dataProductosUX =[{
+  "id": 1,
+  "nombre": "Diseño de app",
+  "precio": 30000
+  },{
+    "id": 2,
+    "nombre": "Diseño web",
+    "precio": 15000
+  },{
+    "id": 3,
+    "nombre": "Diseño de landing",
+    "precio": 10000
+  },
+];
+
+const productosAGREGADOSUX = [];
+
+let dataProductosAV =[{
+  "id": 1,
+  "nombre": "Foto producto x50",
+  "precio": 10000
+  },{
+    "id": 2,
+    "nombre": "Video institucional",
+    "precio": 50000
+  },{
+    "id": 3,
+    "nombre": "Video promocional",
+    "precio": 40000
+  },
+  ,{
+    "id": 4,
+    "nombre": "Animacion redes x4",
+    "precio": 15000
+  },
+];
+
+const productosAGREGADOSAV = [];
